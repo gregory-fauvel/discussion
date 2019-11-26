@@ -17,12 +17,13 @@ if (isset($_SESSION ['login'])){
 
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="module.css">
+  <link rel="stylesheet" type="text/css" href="discussion.css">
   <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
   <title>Page connexion</title>
 </head>
-<body id="commentaire">
+<body id="discussion">
+  <header>
   <?php
       if (isset($_SESSION['login']) && ($_SESSION['login'] == true))
     {
@@ -33,17 +34,17 @@ if (isset($_SESSION ['login'])){
         include 'barnav.php';
     }
     ?>
-
+</header>
 
 <?php
 if (isset($_SESSION['login'])==true){
 ?>
-<div id="">
-  <form action="discussion.php" method="post">
+<div id="formdiscussion">
+  <form action="discussion.php" method="post" align= "center">
     <div>
-        <input type="text" name="login">Votre login:</label></br>
-        <br><label id="titrepost" for="msg"> Poster votre message max 50 caractere :</label></br>
-        <textarea maxlength="50" id="msg" name="message"></textarea>
+        <input  type="text" name="login">Votre login:</label></br>
+        <br><label  id="titrepost" for="msg"> Poster votre message max 140 caractere :</label></br>
+        <textarea  maxlength="140" id="msg" name="message"></textarea>
         <input id="validcomment" type="submit" name="commenter">
     </div>
 </form>
@@ -57,6 +58,36 @@ if (isset($_SESSION['login'])==true){
 else
   echo "Vous n' êtes pas connecté";
  ?>
+
+      <table id="tableau">
+                    <tr>
+                      <th id="tablecomment">Nom:</th>
+                      <th id="tablecomment">Commentaire:</th>
+                      <th id="tablecomment">Date:</th>
+                   </tr>
+            <?php
+                $connexion = mysqli_connect("localhost","root","","discussion");
+                $requete4="SELECT login, message, date FROM utilisateurs LEFT JOIN messages ON utilisateurs.id = messages.id_utilisateur ORDER BY messages.id DESC";
+                $query4=mysqli_query($connexion, $requete4);
+                $data4 = mysqli_fetch_all($query4,MYSQLI_ASSOC);
+                $taille = sizeof($data4);
+
+                  $i = 0;
+                    while($i < $taille)
+                  {
+                    $dateold= $data4[$i]['date'];
+                    $datenew = date('d/m/Y à H:i:s', strtotime($dateold));
+             ?>
+                    <tr>
+                     <td class= "comment">Par:&nbsp;<?php echo $data4[$i]['login']?></td>
+                      <td class="comment"><?php echo $data4[$i]['message']?></td>
+                      <td class="comment">Posté le:&nbsp;<?php echo $datenew?></td>
+                    </tr>
+            <?php
+              $i++;
+                  }
+            ?>
+      </table>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="module.css">
+	<link rel="stylesheet" type="text/css" href="discussion.css">
 	<title>Page index</title>
 </head>
 <body id="bodyindex">
