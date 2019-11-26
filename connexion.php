@@ -110,6 +110,8 @@ if(isset($_POST['login']) && isset($_POST['password']))
 {
          $user = $_SESSION['login'];
          echo "<p id=\"ar-bonjour\">Bonjour $user, vous êtes connecté</p>";
+        header('location:index.php');
+         
 }
 
 

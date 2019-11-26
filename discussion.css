@@ -1,13 +1,13 @@
 #discussion{
 	display: flex;
 	flex-direction: column;
-	
+	font-family: police;
+	background-image: url(discut.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	
 }
-
-
-
-
 
 .Barre{
         text-align: center;
@@ -57,11 +57,16 @@
 
     }
 
-
-
-
-
-
 #tableau{
-	font-family: cursive;
+	border: solid;
+	background-color: rgba(255,255,255,0.5);
 }
+#validcomment{
+	border-radius: 20%;
+	font-family :'police';
+
+}
+@font-face {
+  font-family :'police';
+  src: url('Mandatory Plaything.otf') format('truetype');
+  }
