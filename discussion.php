@@ -2,15 +2,15 @@
 session_start();
 date_default_timezone_set('Europe/Paris');
 $connexion = mysqli_connect("localhost","root","","discussion");
-if (isset($_SESSION ['login']) AND isset($_SESSION ['message'])){
+if (isset($_SESSION ['login'])){
   if (isset ($_POST ['commenter'])){
-   $requete3="SELECT * FROM `utilisateurs` WHERE login='".$_SESSION['login']."'";
+   $requete3="SELECT * FROM utilisateurs WHERE login='".$_SESSION['login']."'";
    $query3 = mysqli_query( $connexion,$requete3);
     $resultat3= mysqli_fetch_all($query3);
-    $requete2="INSERT INTO commentaires (commentaire, id_utilisateur, date) VALUES ('".$_POST['message']."','".$resultat3[0][0]."','".date("Y-m-d H:i:s")."')";
-      
+    $requete2="INSERT INTO messages (message, id_utilisateur, date) VALUES ('".$_POST['message']."','".$resultat3[0][0]."','".date("Y-m-d H:i:s")."')";
+
          $query2 = mysqli_query( $connexion,$requete2);
-         header('location: index.php');
+         header('location: discussion.php');
   }
 
 ?>
@@ -33,13 +33,13 @@ if (isset($_SESSION ['login']) AND isset($_SESSION ['message'])){
         include 'barnav.php';
     }
     ?>
- 
+
 
 <?php
 if (isset($_SESSION['login'])==true){
 ?>
 <div id="">
-  <form action="commentaire.php" method="post">
+  <form action="discussion.php" method="post">
     <div>
         <input type="text" name="login">Votre login:</label></br>
         <br><label id="titrepost" for="msg"> Poster votre message max 50 caractere :</label></br>
@@ -52,7 +52,7 @@ if (isset($_SESSION['login'])==true){
 <?php
 }
 ?>
-<?php 
+<?php
 }
 else
   echo "Vous n' êtes pas connecté";
