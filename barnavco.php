@@ -1,7 +1,7 @@
  
  <header>
-    <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
-            <div class="Barrenav">
+    <link rel="stylesheet" href="discussion.css" media="screen" type="text/css" />
+            <div class="Barre">
                 <nav>
                     <ul id="nav">
                         <li><a href="index.php">Bienvenue</a></li>
