@@ -1,4 +1,4 @@
-
+/*discution.css*/
 .Barre{
         text-align: center;
         background-color: black;
@@ -47,27 +47,67 @@
 
     }
 #discussion{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     font-family: police;
     background-image: url(discut.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-
+    background-size:130%;
+    background-position: 29%-35%;
+    
+   
     
 }
 
 
 #tableau{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
 	border: solid;
+    border-radius: 20px;
+    margin-left: 600px;
 	background-color: rgba(255,255,255,0.5);
+    height: 600px;
+    max-width: 800px;
+    overflow:scroll;
+}
+
+td {
+       word-wrap: break-word;
+       max-width: 400px;
 }
 #validcomment{
-    
 	border-radius: 20px;
 	font-family :'police';
 
 }
+.fotodiscussion{
+    width: 200px;
+    height: 200px;
+
+}
+
+#animmario{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    animation: bouge 6s infinite;
+    margin-top: 45%;
+
+
+}
+@keyframes bouge{
+  0%{transform: translateX(0px);}
+   
+  100%{transform: translateX(1500px);}
+}
+
 @font-face {
   font-family :'police';
   src: url('Mandatory Plaything.otf') format('truetype');

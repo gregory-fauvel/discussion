@@ -60,15 +60,16 @@ else
   echo "Vous n' êtes pas connecté";
  ?>
 
+  
       <table id="tableau">
                     <tr>
                       <th id="tablecomment">Nom:</th>
-                      <th id="tablecomment">Commentaire:</th>
+                      <th id="tablecomment">Discussions:</th>
                       <th id="tablecomment">Date:</th>
                    </tr>
             <?php
                 $connexion = mysqli_connect("localhost","root","","discussion");
-                $requete4="SELECT login, message, date FROM utilisateurs LEFT JOIN messages ON utilisateurs.id = messages.id_utilisateur ORDER BY messages.id DESC";
+                $requete4="SELECT login, message, date FROM utilisateurs LEFT JOIN messages ON utilisateurs.id = messages.id_utilisateur ORDER BY messages.id DESC LIMIT 0,20";
                 $query4=mysqli_query($connexion, $requete4);
                 $data4 = mysqli_fetch_all($query4,MYSQLI_ASSOC);
                 $taille = sizeof($data4);
@@ -89,6 +90,12 @@ else
                   }
             ?>
       </table>
+
+      <div id="animmario">
+      <img class="fotodiscussion" src="boo.png">
+      <img class="fotodiscussion" src="M.gif">
+      </div>
+
 
 
 </body>
