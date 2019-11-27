@@ -54,7 +54,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    
+
 }
 
 
@@ -63,7 +63,7 @@
 	background-color: rgba(255,255,255,0.5);
 }
 #validcomment{
-    
+
 	border-radius: 20px;
 	font-family :'police';
 
@@ -72,3 +72,31 @@
   font-family :'police';
   src: url('Mandatory Plaything.otf') format('truetype');
   }
+
+
+  /* CSS PAGE INDEX*/
+#bodyindex{
+background-image: url('fondindex.gif');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+#titreindex{
+  color:white;
+  text-decoration: none;
+  text-shadow: 0.2em 0.3em 0.1em #d9260c ;
+  font-family: 'police', cursive;
+  background-color: rgba(18, 131, 213, 0.5);
+  width: 100px;
+}
+
+/*animation*/
+#persogaucheindex{
+
+
+}
+
+#persodroiteindex{
+
+
+}

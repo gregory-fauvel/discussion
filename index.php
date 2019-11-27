@@ -18,10 +18,22 @@
 
     ?>
 	</header>
-	
-	<h1 id="titreindex">Bienvenue dans le site  de Discussion</h1>
+
+	<h1 id="titreindex">Bienvenue sur la Plateforme Gaming de l'école</h1>
 
 </section>
-	
+
+<main>
+
+	<div id="persogaucheindex">
+</div>
+
+<div id="persodroiteindex">
+</div>
+
+
+
+</main>
+
 </body>
 </html>
