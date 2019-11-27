@@ -1,7 +1,7 @@
 
 .Barre{
         text-align: center;
-        background-color: black;
+        background-color:#0000009c;
         display: inline-block;
         flex-direction: row;
         text-align: center;
@@ -12,6 +12,11 @@
         font-family: 'police', cursive;
 
     }
+body{
+
+  margin: 0;
+}
+
  #nav {
         list-style-type: none;
         text-align: center;
@@ -76,27 +81,63 @@
 
   /* CSS PAGE INDEX*/
 #bodyindex{
-background-image: url('fondindex.gif');
+background-image: url('fondcommentaire.gif');
 background-repeat: no-repeat;
 background-size: cover;
 }
 
 #titreindex{
+text-align: center;
   color:white;
   text-decoration: none;
   text-shadow: 0.2em 0.3em 0.1em #d9260c ;
   font-family: 'police', cursive;
   background-color: rgba(18, 131, 213, 0.5);
-  width: 100px;
+  width: 100%;
 }
 
 /*animation*/
-#persogaucheindex{
-
-
-}
-
-#persodroiteindex{
-
+.photoindex{
+height:200px;
+width: auto;
 
 }
+
+#animationindex{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+.photoindex0{
+  height:205px;
+  width: auto;
+  animation: entree 5s;
+  }@keyframes entree {
+  0%{transform:translateX(-83px);}
+  100%{transform:translateX(150px);}
+}
+
+
+.photoindex2{
+  height:205px;
+  width: auto;
+  animation: sortie 5s;
+  }
+  @keyframes sortie {
+  0%{transform:translateX(83px);}
+  100%{transform:translateX(-150px);}
+
+
+  }
+
+
+#photoindex1{
+height: 12%;
+width: 40%;
+animation: fondu 10s;
+}
+
+@keyframes fondu {
+0%{opacity: 0;}
+100%{opacity: 1;}

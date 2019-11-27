@@ -21,19 +21,22 @@
 
 	<h1 id="titreindex">Bienvenue sur la Plateforme Gaming de l'école</h1>
 
-</section>
 
-<main>
 
-	<div id="persogaucheindex">
+
+
+	<div id=animationindex>
+		<img class="photoindex0" src="persogaucheindex.png" alt="">
+		<img  id="photoindex1" src="logoapparitionindex.png" alt="">
+		<img class="photoindex2" src="persodroiteindex.png" alt="">
+
 </div>
 
-<div id="persodroiteindex">
-</div>
 
 
 
-</main>
+
+
 
 </body>
 </html>
