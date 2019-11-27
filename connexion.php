@@ -5,9 +5,7 @@
  <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="discussion.css" media="screen" type="text/css" />
 </head>
-<body>
-<header>
-  <?php
+<?php
 session_start();
     if (isset($_SESSION['login']) && ($_SESSION['login'] == true))
     {
@@ -18,8 +16,6 @@ session_start();
         include 'barnav.php';
     }
     ?>
-</header>
-
     <div id="">
         <!-- zone de connexion -->
 
@@ -114,7 +110,8 @@ if(isset($_POST['login']) && isset($_POST['password']))
 {
          $user = $_SESSION['login'];
          echo "<p id=\"ar-bonjour\">Bonjour $user, vous êtes connecté</p>";
-         header('location:index.php');
+        header('location:index.php');
+         
 }
 
 
