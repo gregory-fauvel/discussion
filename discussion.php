@@ -35,6 +35,7 @@ if (isset($_SESSION ['login'])){
     }
     ?>
 </header>
+<h1>Discutez de vos jeux</h1>
 
 <?php
 if (isset($_SESSION['login'])==true){
@@ -42,9 +43,9 @@ if (isset($_SESSION['login'])==true){
 <div id="formdiscussion">
   <form action="discussion.php" method="post" align= "center">
     <div>
-        <input  type="text" name="login">Votre login:</label></br>
-        <br><label  id="titrepost" for="msg"> Poster votre message max 140 caractere :</label></br>
-        <textarea  maxlength="140" id="msg" name="message"></textarea>
+        <input id="validcomment" type="text" name="login">Votre login:</label></br>
+        <br><label  id="validcomment" for="msg"> Poster votre message max 140 caractere :</label></br>
+        <textarea id="validcomment"  maxlength="140" id="msg" name="message"></textarea>
         <input id="validcomment" type="submit" name="commenter">
     </div>
 </form>
@@ -79,15 +80,16 @@ else
                     $datenew = date('d/m/Y à H:i:s', strtotime($dateold));
              ?>
                     <tr>
-                     <td class= "comment">Par:&nbsp;<?php echo $data4[$i]['login']?></td>
-                      <td class="comment"><?php echo $data4[$i]['message']?></td>
-                      <td class="comment">Posté le:&nbsp;<?php echo $datenew?></td>
+                     <td class= "comment"><b>Par:&nbsp;<?php echo $data4[$i]['login']?></b></td>
+                      <td class="comment"><b><?php echo $data4[$i]['message']?></b></td>
+                      <td class="comment"><b>Posté le:&nbsp;<?php echo $datenew?></b></td>
                     </tr>
             <?php
               $i++;
                   }
             ?>
       </table>
+
 
 </body>
 </html>

@@ -1,21 +1,17 @@
-#discussion{
-	display: flex;
-	flex-direction: column;
-
-}
 
 .Barre{
         text-align: center;
         background-color: black;
-        display: flex;
-        flex-direction:row;
-				justify-content: center;
+        display: inline-block;
+        flex-direction: row;
+        text-align: center;
+        padding: 0%;
         margin: auto;
         width: 100%;
-        height: 100px;
-        font-family: 'Trade Winds', cursive;
-    }
+        height: 50px;
+        font-family: 'police', cursive;
 
+    }
  #nav {
         list-style-type: none;
         text-align: center;
@@ -25,7 +21,7 @@
         margin-right: 20%;
         margin: auto;
         margin-top: 1%;
-        font-family: 'Trade Winds', cursive;
+        font-family: 'police', cursive;
         background-color: black;
 
     }
@@ -50,17 +46,29 @@
         color:#e7a7a7;
 
     }
+#discussion{
+    display: flex;
+    flex-direction: column;
+    font-family: police;
+    background-image: url(discut.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+
 
 #tableau{
-	font-family: cursive;
+	border: solid;
+	background-color: rgba(255,255,255,0.5);
 }
-
-
-/*BODY INDEX*/
-#bodyindex{
-background-image: url('fondindexbienvenue.gif');
-background-size: cover;
-background-repeat: no-repeat;
-color: white;
+#validcomment{
+    
+	border-radius: 20px;
+	font-family :'police';
 
 }
+@font-face {
+  font-family :'police';
+  src: url('Mandatory Plaything.otf') format('truetype');
+  }
