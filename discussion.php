@@ -23,7 +23,7 @@ if (isset($_SESSION ['login'])){
   <title>Page connexion</title>
 </head>
 <body id="discussion">
-  <header>
+  
   <?php
       if (isset($_SESSION['login']) && ($_SESSION['login'] == true))
     {
@@ -34,8 +34,8 @@ if (isset($_SESSION ['login'])){
         include 'barnav.php';
     }
     ?>
-</header>
-<h1>Discutez de vos jeux</h1>
+
+<h1 id="h1">Discutez de vos jeux</h1>
 
 <?php
 if (isset($_SESSION['login'])==true){
@@ -43,9 +43,10 @@ if (isset($_SESSION['login'])==true){
 <div id="formdiscussion">
   <form action="discussion.php" method="post" align= "center">
     <div>
-        <input id="validcomment" type="text" name="login">Votre login:</label></br>
-        <br><label  id="validcomment" for="msg"> Poster votre message max 140 caractere :</label></br>
-        <textarea id="validcomment"  maxlength="140" id="msg" name="message"></textarea>
+        <label>Votre login:</label>
+        <input id="validcomment" type="text" name="login"></br>
+        <label>Poster votre message max 140 caractere :</label>
+        <textarea id="validcomment"  maxlength="140"  name="message"></textarea>
         <input id="validcomment" type="submit" name="commenter">
     </div>
 </form>
@@ -74,6 +75,7 @@ else
                 $query4=mysqli_query($connexion, $requete4);
                 $data4 = mysqli_fetch_all($query4,MYSQLI_ASSOC);
                 $taille = sizeof($data4);
+              
 
                   $i = 0;
                     while($i < $taille)
