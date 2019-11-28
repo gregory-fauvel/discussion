@@ -96,7 +96,7 @@ text-align: center;
   width: 100%;
 }
 
-/*animation*/
+/*animation des images e l'index*/
 .photoindex{
 height:200px;
 width: auto;
@@ -127,8 +127,6 @@ justify-content: space-around;
   @keyframes sortie {
   0%{transform:translateX(83px);}
   100%{transform:translateX(-150px);}
-
-
   }
 
 
@@ -141,3 +139,49 @@ animation: fondu 10s;
 @keyframes fondu {
 0%{opacity: 0;}
 100%{opacity: 1;}
+}
+
+/*CSS PAGE INSCRIPTION*/
+
+#fondinscription{
+background-image: url("fondinscrition.jpg");
+background-size: cover;
+background-repeat:no-repeat;
+
+}
+
+#ar_h1{
+display: flex;
+justify-content: center;
+font-family: 'police', cursive;
+font-size: 20px;
+color:white;
+height: 30px;
+text-decoration: underline;
+text-shadow: 0.2em 0.3em 0.1em #d9260c ;
+background-color: rgba(210, 24, 24, 0.7);
+border-style: ridge;
+border-width: 10px;
+border-radius: 30px 40px 10px;
+border-color:rgb(67, 198, 222, 0.7);rgb(31, 219, 163)
+
+}
+
+#tableauinscrip{
+  display: flex;
+  justify-content: center;
+  margin: 150px;
+  border-radius: 100px 30px 40px 90px;
+  width: 50%;
+  font-family: 'police', cursive;
+color:white;
+text-decoration: underline;
+text-shadow: 0.2em 0.3em 0.1em #d9260c ;
+background-color: rgba(201, 169, 169, 0.7);
+border-style: ridge;
+border-width: 10px;
+border-color:rgb(67, 198, 222, 0.7);
+
+
+
+}

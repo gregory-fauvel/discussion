@@ -39,21 +39,23 @@ $connexion->close();
 	<link rel="stylesheet" type="text/css" href="discussion.css">
 	<link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
 
-	<title>page d'inscription</title>
+	<title>Page d'inscription</title>
 </head>
-<body id="ar-body-inscription">
+
+<body id="fondinscription">
+<header>
 
 	<?php
 	include 'barnav.php';
 	?>
-	
-<div id="titreinscription">
-	<h1 id="ar-h1">Inscrivez-vous</h1>
+</header>
+
+	<h1 id="ar_h1">Inscrivez-vous</h1>
 
 </div>
 
 	<div class="form" align="center">
-		<form method="POST" action="inscription.php">
+		<form id="tableauinscrip" method="POST" action="inscription.php">
 			<table align="center">
 				<tr>
 					<td align="right"><label>Login;</label>
