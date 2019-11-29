@@ -133,13 +133,40 @@ td {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
+    justify-content: space-around;
     align-items: center;
   }
 #h1{
     font-family :'police';
     text-shadow:8px 3px blue;
   }
+#nuage{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    animation: bouge 7s infinite;
+    margin-top: -15%;
+    margin-left: -44%;
+
+
+
+}
+@keyframes bouge{
+    0%{transform: translateX(0px);}
+    10%{opacity: 1;}
+    25%{opacity: 1;}
+    30%{opacity: 1;}
+    33%{opacity: 1;}
+    80%{opacity: 1;}
+    81%{opacity: 1;}
+    90%{opacity: 0;}
+    99%{transform: translateX(1700px);}
+    100%{opacity: 0;}
+    
+}
+
+
  
 #profilform{
     display: flex;

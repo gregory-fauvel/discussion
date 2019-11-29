@@ -17,8 +17,8 @@ $data = mysqli_fetch_assoc($req);
 
 ?>
 
-     <body id="modifprofil">
-   
+     <body>
+
                     <?php
                 if ($_SESSION['login'] == true)
                 {
@@ -29,24 +29,20 @@ $data = mysqli_fetch_assoc($req);
                     include 'barnav.php';
                 }
                 ?>
-    
-            <h1 id="h1">Modifiez votre profil</h1><br>
-                <div id="profilform">
-                    
 
-                    <form method="POST" action="profil.php">
+        <main id="modifprofil">
+                  <img id="nuage" src="goku_nuage.png">
+
+                    <div id="profilform">
+                        <h1 id="h1">Modifiez votre profil</h1><br>
+                        <form method="POST" action="profil.php">
                         <label class="formprofil">Nouveaux login</label>
                         <input id="validcomment"type="text" value="<?php echo $data['login']?>" placeholder="Nouvel identifiant" name="login"></input><br><br/>
-
                         <label class="formprofil" >Nouveau mot de passe:</label>
                         <input id="validcomment" type="password" value="<?php echo $data['password']?>" placeholder="nouveau mot de passe" name="mdp"></input><br><br/>
-
-                
                         <input id="butprof" type="submit" name="Modifier" value ="Valider">
-
-                    </form><br>
-
-                </div>
+                        </form><br>
+                    </div>
                 <?php
 
                 if (isset($_POST['Modifier']))
@@ -77,7 +73,7 @@ $data = mysqli_fetch_assoc($req);
                         <?php
                         }
                         ?>
-
+                </main>
          </body>
 </html>
 
