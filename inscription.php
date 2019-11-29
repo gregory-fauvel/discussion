@@ -1,6 +1,9 @@
 <?php
 session_start();
 $connexion = mysqli_connect("localhost","root","","discussion");
+if (!isset($_SESSION['login'])) {
+	# code...
+
 if (isset($_POST['connexion']))
 {
 	$mdp3= password_hash($_POST["mdp"], PASSWORD_DEFAULT, array('cost' => 12));
@@ -75,8 +78,11 @@ $connexion->close();
 								</table>
 							</form>
 						</div>
-
-
-
-					</body>
-					</html>
+						<?php
+					}
+					else{
+						echo"Vous etes déja connecté!!";
+					}
+					?>
+			</body>
+		</html>

@@ -35,7 +35,7 @@ if (isset($_SESSION ['login'])){
     }
     ?>
 
-<h1 id="h1">Discutez de vos jeux</h1>
+<h1 id="h1">Discutez de vos jeux ici!</h1>
 
 <?php
 if (isset($_SESSION['login'])==true){
@@ -44,10 +44,10 @@ if (isset($_SESSION['login'])==true){
   <form action="discussion.php" method="post" align= "center">
     <div>
         <label>Votre login:</label>
-        <input id="validcomment" type="text" name="login"></br>
+        <input class="validcomment" type="text" name="login"></br>
         <label>Poster votre message max 140 caractere :</label>
-        <textarea id="validcomment"  maxlength="140"  name="message"></textarea>
-        <input id="validcomment" type="submit" name="commenter">
+        <textarea class="validcomment"  maxlength="140"  name="message"></textarea>
+        <input class="validcomment" type="submit" name="commenter">
     </div>
 </form>
 </div>
@@ -60,6 +60,14 @@ if (isset($_SESSION['login'])==true){
 else
   echo "Vous n' êtes pas connecté";
  ?>
+            <?php
+                $connexion = mysqli_connect("localhost","root","","discussion");
+                $requete4="SELECT login, message, date FROM utilisateurs LEFT JOIN messages ON utilisateurs.id = messages.id_utilisateur ORDER BY messages.id DESC LIMIT 0,20";
+                $query4=mysqli_query($connexion, $requete4);
+                $data4 = mysqli_fetch_all($query4,MYSQLI_ASSOC);
+                $taille = sizeof($data4);
+              
+              ?>
  
 
   
@@ -69,14 +77,7 @@ else
                       <th id="tablecomment">Discussions:</th>
                       <th id="tablecomment">Date:</th>
                    </tr>
-            <?php
-                $connexion = mysqli_connect("localhost","root","","discussion");
-                $requete4="SELECT login, message, date FROM utilisateurs LEFT JOIN messages ON utilisateurs.id = messages.id_utilisateur ORDER BY messages.id DESC LIMIT 0,20";
-                $query4=mysqli_query($connexion, $requete4);
-                $data4 = mysqli_fetch_all($query4,MYSQLI_ASSOC);
-                $taille = sizeof($data4);
-              
-
+              <?php
                   $i = 0;
                     while($i < $taille)
                   {
