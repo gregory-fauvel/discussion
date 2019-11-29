@@ -22,17 +22,16 @@ session_start();
         <!-- zone de connexion -->
 
         <form id="ar-form" action="connexion.php" method="POST">
-            <h1 id="ar-h1-co">Connexion</h1>
-
+            <h1 id="ar-h1-co">Connexion:...</h1>
+<br/>
             <label class="ar-lab"><b>Login</b></label><br>
             <input class="ar-input-co" type="text" placeholder="Entrer le nom d'utilisateur" name="login" required><br>
 
-            <label class="ar-lab"><b>Password</b></label><br>
+            <label class="ar-lab"><b>...Password</b></label><br>
             <input class="ar-input-co" type="password" placeholder="Entrer le mot de passe" name="password" required><br><br>
 
             <br>
-
-            <br><input type="submit" id='submitconnexion' value="" >
+<br><input type="submit" id='submitconnexion' value="" >
             <?php
             if(isset($_GET['erreur'])){
                 $err = $_GET['erreur'];
@@ -46,6 +45,13 @@ session_start();
 <div id="validationconnection">
 
   <p>Rejoins nous!</p>
+
+</div>
+<div id="zeldaanimé">
+  	<img class="photoindex0" src="zeldaconnexion.png" alt="">
+  	<img class="photoindex0" src="zeldaconnexion2.png" alt="">
+  	<img class="photoindex0" src="zeldaconnexion3.png" alt="">
+    <img  id="photoindex5" src="logozeldatitre" alt="">
 
 </div>
 
