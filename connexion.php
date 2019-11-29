@@ -16,7 +16,9 @@ session_start();
         include 'barnav.php';
     }
     ?>
-    <div id="">
+    <body id="fondconnexion">
+
+    <div id="zone connexion" >
         <!-- zone de connexion -->
 
         <form id="ar-form" action="connexion.php" method="POST">
@@ -29,7 +31,8 @@ session_start();
             <input class="ar-input-co" type="password" placeholder="Entrer le mot de passe" name="password" required><br><br>
 
             <br>
-            <br><input type="submit" id='submit' value='LOGIN' >
+
+            <br><input type="submit" id='submitconnexion' value="" >
             <?php
             if(isset($_GET['erreur'])){
                 $err = $_GET['erreur'];
@@ -39,7 +42,15 @@ session_start();
             ?>
         </form>
     </div>
+
+<div id="validationconnection">
+
+  <p>Rejoins nous!</p>
+
+</div>
+
     <div id="content">
+
 
 
         <!-- tester si l'utilisateur est connecté -->
@@ -111,7 +122,7 @@ if(isset($_POST['login']) && isset($_POST['password']))
          $user = $_SESSION['login'];
          echo "<p id=\"ar-bonjour\">Bonjour $user, vous êtes connecté</p>";
         header('location:index.php');
-         
+
 }
 
 

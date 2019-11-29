@@ -1,4 +1,12 @@
 
+@font-face {
+  font-family: "The Wild Breath of Zelda";
+  font-style: normal;
+  font-weight: normal;
+  src: local('The Wild Breath of Zelda'), url('The Wild Breath of Zelda.otf') format('truetype');
+
+}
+
 .Barre{
         text-align: center;
         background-color:#0000009c;
@@ -182,6 +190,44 @@ border-style: ridge;
 border-width: 10px;
 border-color:rgb(67, 198, 222, 0.7);
 
+}
 
+/*CSS PAGE CONNEXION*/
+
+#fondconnexion{
+background-image: url("fondconnexion.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+#ar-h1-co{
+  color: white;
+  font-family:'The Wild Breath of Zelda', cursive;
+  font-size: 40px;
+}
+
+#ar-form{
+align-items: center;
+
+}
+
+#submitconnexion{
+  background-image: url("logozelda.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+   background-color: rgba(255,255,255,0);
+  border-radius: 190px;
+  padding: 120px;
+
+}
+
+#validationconnection{
+margin: 20px;
+color: white;
+font-size: 20px;
+position: absolute;
+font-family:'The Wild Breath of Zelda', cursive;
 
 }
