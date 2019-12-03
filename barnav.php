@@ -1,5 +1,5 @@
  <header>
-    <link rel="stylesheet" href="discussion" media="screen" type="text/css" />
+    <link rel="stylesheet" href="discussion.css" media="screen" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap" rel="stylesheet">
             <div class="Barre">
                 <nav>

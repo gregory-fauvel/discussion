@@ -71,10 +71,6 @@ session_start();
 </html>
 
 <?php
-if (!isset($_SESSION['login']))
-{
-    $_SESSION['login'] = '';
-}
 
 if(isset($_POST['login']) && isset($_POST['password']))
 {
